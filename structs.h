@@ -9,6 +9,8 @@
 #ifndef mklatc_structs_h
 #define mklatc_structs_h
 
+#include "conversiontable_helper.h"
+
 //typedefstructs
 typedef struct {
     double x;
@@ -29,12 +31,10 @@ typedef struct {
     atom **at;
 } coords;
 
+
 typedef struct {
-    char dopesymb[2];
-    int atnofdop;
-    double dopc;
-    int atn2sub;
-    char *parfile;
+    int noe;
+    conv_tbl *cvt;
     char *infile;
     char *outfile;
 } parameters;

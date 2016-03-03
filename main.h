@@ -21,6 +21,8 @@
 #include "read_newcoo.h"
 #include "append_filename.h"
 #include "coords_helper.h"
+#include "conversiontable_helper.h"
+
 
 
 #endif /* defined(__newcoo2old__main__) */

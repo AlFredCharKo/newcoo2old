@@ -6,10 +6,19 @@
 //  Copyright (c) 2016 Alexander Kompch. All rights reserved.
 //
 
-#include <stdio.h>
+#include "main.h"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+    char *infile = handle_cmdlargs(argc, argv);
+    coords *newcoo = read_newcoo(infile);
+    
+    conv_tbl *cvt = count_noe(newcoo);
+    
+    
+    
+
+
+    coords_free(newcoo);
+    free(infile);
     return 0;
 }

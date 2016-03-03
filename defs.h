@@ -10,6 +10,6 @@
 #define mklatc_defs_h
 
 #define MAX_LEN 255
-#define DEFPARFILE "rancoo.par"
+
 
 #endif
