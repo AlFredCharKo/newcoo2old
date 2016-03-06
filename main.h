@@ -22,6 +22,9 @@
 #include "append_filename.h"
 #include "coords_helper.h"
 #include "conversiontable_helper.h"
+#include "count_noe.h"
+#include "convert_new2old.h"
+#include "write_oldcoo.h"
 
 
 

@@ -11,9 +11,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "defs.h"
 #include "structs.h"
 #include "conversiontable_helper.h"
 
-conv_tbl *count_noe(coords *given);
+conv_tbl *get_noe(coords *given);
 
 #endif /* defined(__newcoo2old__count_noe__) */

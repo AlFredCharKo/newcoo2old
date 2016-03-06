@@ -34,7 +34,7 @@ typedef struct {
 
 typedef struct {
     int noe;
-    conv_tbl *cvt;
+    void *cvt;
     char *infile;
     char *outfile;
 } parameters;

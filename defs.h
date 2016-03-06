@@ -10,6 +10,7 @@
 #define mklatc_defs_h
 
 #define MAX_LEN 255
+#define START_SIZE 10
 
 
 #endif

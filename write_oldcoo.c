@@ -12,24 +12,22 @@ int write_oldcoo(char *filename, coords *coo) {
     FILE *FP;
     int i=0;
     
-    printf("\nwrite_coo: filename = %s",filename);
+    printf("\nwrite_oldcoo: filename = %s",filename);
+    
+        // format(i6,1x,i2,5(1x,g13.6))
+        //write(11,9000)i,typ(i),a(i),b(i),c(i),0.0,1.0
     
     if (coo == NULL) return EXIT_FAILURE;
        
     FP=fopen(filename, "wt");
     if (FP == NULL) {
-        printf("\n***   write_coo:Could not open <%s>.", filename);
+        printf("\n***   write_oldcoo:Could not open <%s>.", filename);
         return EXIT_FAILURE;
     }
-    
-    printf("\n***write_coo: coo->nat=%d",coo->nat);
-    fprintf(FP, "%7s %6d %+10.4f %+10.4f %+10.4f\n", "new-coo", coo->nat, coo->boxL.x, coo->boxL.y, coo->boxL.z);
-
     for(i=0;i<coo->nat;i++) {
-        fprintf(FP, "%5d %2s %2d %+-8.6f %+-8.6f %+-8.6f\n", coo->at[i]->n, coo->at[i]->esymb, coo->at[i]->atn, coo->at[i]->pnt.x, coo->at[i]->pnt.y, coo->at[i]->pnt.z);
+        fprintf(FP, "%6d %2d %+13.6f %+13.6f %+13.6f %+13.6f %+13.6f\n", coo->at[i]->n, coo->at[i]->atn, coo->at[i]->pnt.x, coo->at[i]->pnt.y, coo->at[i]->pnt.z, 0.0, 1.0);
     }
-    
-    printf("\n***write_coo: here!!!");
+    printf("\n***write_oldcoo: here!!!");
     fclose(FP);
     
     return EXIT_SUCCESS;

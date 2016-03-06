@@ -8,7 +8,7 @@
 
 #include "coords_helper.h"
 
-coords *init_coords(int nat, vec boxL) {
+coords *coords_init(int nat, vec boxL) {
     int i = 0;
     
     coords *given = (coords*)calloc(1, sizeof(coords));

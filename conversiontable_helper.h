@@ -29,6 +29,11 @@ conv_tbl *cvt_init(int nset);
 int cvt_free(conv_tbl *given);
 void cvt_set(conv_tbl *given, int n, cvt_pair set);
 cvt_pair cvt_get(conv_tbl *given, int n);
+int cvt_size(conv_tbl *given);
+int cvt_add(conv_tbl *given, cvt_pair pair);
+void cvt_limitsize(conv_tbl *given);
+void cvt_askuser(conv_tbl *given);
+int cvt_attlookup(conv_tbl *cvt, int atn);
 
 
 #endif /* defined(__newcoo2old__conversiontable_helper__) */
